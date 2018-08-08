@@ -59,10 +59,10 @@ export K8SHA_KA_AUTH=DlU5H0xan8iYOTLxT03kH8LRK7tpwnuP
 export ETCD_TOKEN=7LkIofHsdAB3Flrx5vUTSoe7ANXqNjvx
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
-export K8SHA_TOKEN=7jhdmc.z7k8umgbkd23dyiu
+export K8SHA_TOKEN=yf0t14.7ekahohaetbdphqg
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
-export K8SHA_CIDR=100.126.0.0\\/16
+export K8SHA_CIDR=10.244.0.0\\/16
 
 
 ##############################

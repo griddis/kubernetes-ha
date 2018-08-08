@@ -1,9 +1,13 @@
-apiVersion: kubeadm.k8s.io/v1alpha1
+apiVersion: kubeadm.k8s.io/v1alpha2
 kind: MasterConfiguration
 kubernetesVersion: v1.11.1
+apiServerExtraArgs:
+  apiserver-count: "5"
 networking:
   podSubnet: K8SHA_CIDR
   serviceSubnet: 100.120.0.0/16
+api:
+  advertiseAddress: K8SHA_IP1
 etcd:
   endpoints:
   - http://K8SHA_IP1:2379
