@@ -19,7 +19,7 @@ EOF
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
 
-apt-get install keepalived
+apt-get install -y keepalived
 systemctl enable keepalived && systemctl restart keepalived
 
 echo "net.bridge.bridge-nf-call-iptables=1" >> /etc/sysctl.conf
