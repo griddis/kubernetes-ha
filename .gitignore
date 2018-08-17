@@ -1,3 +1,4 @@
 loadbalancer.sh
 start-etcd-cluster.sh
 restart-cluster.sh
+*~

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # local machine ip address
-export K8SHA_IPLOCAL=172.26.133.21
+export K8SHA_IPLOCAL=10.0.3.104
 
 # local machine etcd name, options: etcd1, etcd2, etcd3, etcd4, etcd5
 export K8SHA_ETCDNAME=etcd1
@@ -13,56 +13,56 @@ export K8SHA_KA_STATE=MASTER
 export K8SHA_KA_PRIO=102
 
 # local machine keepalived network interface name config, for example: eth0
-export K8SHA_KA_INTF=ens18
+export K8SHA_KA_INTF=ens5
 
 #######################################
 # all masters settings below must be same
 #######################################
 
 # master keepalived virtual ip address
-export K8SHA_IPVIRTUAL=172.26.133.20
+export K8SHA_IPVIRTUAL=10.0.3.134
 
 # master01 ip address
-export K8SHA_IP1=172.26.133.21
+export K8SHA_IP1=10.0.3.104
 
 # master02 ip address
-export K8SHA_IP2=172.26.133.22
+export K8SHA_IP2=10.0.3.105
 
 # master03 ip address
-export K8SHA_IP3=172.26.133.23
+export K8SHA_IP3=10.0.3.106
 
 # master04 ip address
-export K8SHA_IP4=172.26.133.24
+export K8SHA_IP4=10.0.3.107
 
 # master05 ip address
-export K8SHA_IP5=172.26.133.25
+export K8SHA_IP5=10.0.3.108
 
 # master01 hostname
-export K8SHA_HOSTNAME1=hb-master01
+export K8SHA_HOSTNAME1=spa-kube-master1-1.internal.eldorado.ru
 
 # master02 hostname
-export K8SHA_HOSTNAME2=hb-master02
+export K8SHA_HOSTNAME2=spa-kube-master1-2.internal.eldorado.ru
 
 # master03 hostname
-export K8SHA_HOSTNAME3=hb-master03
+export K8SHA_HOSTNAME3=spa-kube-master1-3.internal.eldorado.ru
 
 # master04 hostname
-export K8SHA_HOSTNAME4=hb-master04
+export K8SHA_HOSTNAME4=spa-kube-master1-4.internal.eldorado.ru
 
 # master04 hostname
-export K8SHA_HOSTNAME5=hb-master05
+export K8SHA_HOSTNAME5=spa-kube-master1-5.internal.eldorado.ru
 
 # keepalived auth_pass config, all masters must be same
-export K8SHA_KA_AUTH=56cf8dd754c90194d1600c483e10abfr
+export K8SHA_KA_AUTH=DlU5H0xan8iYOTLxT03kH8LRK7tpwnuP
 
 #etcd tocken:
-export ETCD_TOKEN=9489bf68bdfe1b9ae037d6fd9e7efefd
+export ETCD_TOKEN=7LkIofHsdAB3Flrx5vUTSoe7ANXqNjvx
 
 # kubernetes cluster token, you can use 'kubeadm token generate' to get a new one
-export K8SHA_TOKEN=yf0t14.7ekahohaetbdphqg
+export K8SHA_TOKEN=7jhdmc.z7k8umgbkd23dyiu
 
 # kubernetes CIDR pod subnet, if CIDR pod subnet is "10.244.0.0/16" please set to "10.244.0.0\\/16"
-export K8SHA_CIDR=10.244.0.0\\/16
+export K8SHA_CIDR=100.126.0.0\\/16
 
 
 ##############################

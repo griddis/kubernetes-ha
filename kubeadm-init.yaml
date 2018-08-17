@@ -1,27 +1,41 @@
 apiVersion: kubeadm.k8s.io/v1alpha1
 kind: MasterConfiguration
-kubernetesVersion: v1.10.3
+kubernetesVersion: v1.11.1
 networking:
-  podSubnet: 10.244.0.0/16
+  podSubnet: 100.126.0.0/16
+  serviceSubnet: 100.120.0.0/16
+etcd:
+  endpoints:
+  - http://10.0.3.104:2379
+  - http://10.0.3.105:2379
+  - http://10.0.3.106:2379
+  - http://10.0.3.107:2379
+  - http://10.0.3.108:2379
 apiServerCertSANs:
-- hb-master01
-- hb-master02
-- hb-master03
-- hb-master04
-- hb-master05
-- 172.26.133.21
-- 172.26.133.22
-- 172.26.133.23
-- 172.26.133.24
-- 172.26.133.25
-- 172.26.133.20
+- spa-kube-master1-1.internal.eldorado.ru
+- spa-kube-master1-2.internal.eldorado.ru
+- spa-kube-master1-3.internal.eldorado.ru
+- spa-kube-master1-4.internal.eldorado.ru
+- spa-kube-master1-5.internal.eldorado.ru
+- 10.0.3.104
+- 10.0.3.105
+- 10.0.3.106
+- 10.0.3.107
+- 10.0.3.108
+- 10.0.3.134
 - 127.0.0.1
 etcd:
   endpoints:
-  - http://172.26.133.21:2379
-  - http://172.26.133.22:2379
-  - http://172.26.133.23:2379
-  - http://172.26.133.24:2379
-  - http://172.26.133.25:2379
-token: yf0t14.7ekahohaetbdphqg
+  - http://10.0.3.104:2379
+  - http://10.0.3.105:2379
+  - http://10.0.3.106:2379
+  - http://10.0.3.107:2379
+  - http://10.0.3.108:2379
+token: 7jhdmc.z7k8umgbkd23dyiu
 tokenTTL: "0"
+featureGates:
+  CoreDNS: true
+kubeletConfiguration:
+  baseConfig:
+    clusterDNS:
+    - 100.120.0.10
