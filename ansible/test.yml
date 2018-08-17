@@ -1,0 +1,13 @@
+---
+
+- name: Run show commands on routers
+  hosts: kubernetes-masters
+  gather_facts: false
+
+  tasks:
+
+    - name: run ip addr        
+      raw: ip addr
+
+    - name: run ip route
+      raw: ip route
